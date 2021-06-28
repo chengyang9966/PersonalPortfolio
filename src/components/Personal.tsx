@@ -5,6 +5,7 @@ import CardGroup from 'react-bootstrap/CardGroup'
 const Personal=()=>{
 
     return(
+      <div className="personal-bg">
         <CardGroup id="about">
    
         <Card style={{border:'none'}}>
@@ -27,6 +28,7 @@ const Personal=()=>{
       </Card>
 
         </CardGroup>
+      </div>
     )
 }
 

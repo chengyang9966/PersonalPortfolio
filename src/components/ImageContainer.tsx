@@ -9,6 +9,8 @@ const ImageContainer=()=>{
     const handleSelect = (selectedIndex:number) => {
       setIndex(selectedIndex)}
 return(
+  <section className="imageContainer"> 
+    
   <div id="portfolio" > 
   <h2 className='portfolio-header'>Portfolio</h2>
 
@@ -53,6 +55,7 @@ return(
     </Carousel.Item>
   </Carousel>
   </div>
+  </section>
 )}
 
 export default ImageContainer

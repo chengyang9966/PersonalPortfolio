@@ -6,9 +6,20 @@ import ImageContainer from 'src/components/ImageContainer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ContactMe from 'src/components/ContactMe';
 import FloatButton from 'src/components/FloatButton';
+import Loading from 'src/components/Loading';
 import {Mode} from 'src/Types'
-import {useState} from 'react';
+import {useState,useEffect} from 'react';
 function App() {
+  const [loading,setLoading]=useState<Boolean>(true)
+  var root = document.getElementById('root');
+  useEffect(()=>{
+    if(root){
+      setLoading(false)
+    }else{
+      setLoading(true)
+    }
+  },[root])
+
   var body = document.body;
   var html = document.documentElement;
   const [theme,setTheme]=useState(Mode.light)
@@ -36,11 +47,11 @@ function App() {
   window.onresize = function () {
     initiateHeights();
   }
-  
 
 
   return (
-    <>
+    loading?<Loading/>
+    :<>
   <div className={theme} style={{marginBottom:'80rem'}}>
       <Header theme={setTheme}/>
       <span className="headerKey"/>
