@@ -7,6 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import ContactMe from 'src/components/ContactMe';
 import FloatButton from 'src/components/FloatButton';
 import Loading from 'src/components/Loading';
+import PreviewImage from 'src/components/previewImage';
 import {Mode} from 'src/Types'
 import {useState,useEffect} from 'react';
 function App() {
@@ -58,6 +59,7 @@ function App() {
       <Body/>
 
       <Personal/>
+      <PreviewImage/>
       <ImageContainer/>
       <ContactMe/>
     </div>

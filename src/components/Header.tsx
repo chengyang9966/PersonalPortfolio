@@ -31,9 +31,10 @@ const Header = (props:HeaderType) => {
 
   return (
     <>
-    <Navbar fixed="top" expand="lg">
+    <Navbar  fixed="top" expand="lg">
       <Container >
         <Navbar.Brand href="#home">Cheng Yang</Navbar.Brand>
+         <Navbar.Collapse id="responsive-navbar-nav">
          <Container>
           <Nav className="me-auto ">
             <Nav.Item>
@@ -56,6 +57,8 @@ const Header = (props:HeaderType) => {
          <Navbar.Text onClick={()=>setTheme(theme===Mode.dark?Mode.light:Mode.dark)}>
         { theme===Mode.light?<BsSun className='sun'/>:<BsMoon className='moon' />}
          </Navbar.Text>
+          </Navbar.Collapse>
+          
       </Container>
     </Navbar>
     

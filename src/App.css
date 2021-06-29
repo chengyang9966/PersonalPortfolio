@@ -170,6 +170,15 @@ body{
   align-items: baseline;
   position: relative;
 }
+/* border */
+
+.figure img:hover{
+  -webkit-animation: breathPop 2s linear ;
+  -moz-animation: breathPop 2s linear ;
+  animation: breathPop 2s linear ;
+  animation-fill-mode: forwards;  
+  cursor:pointer;
+}
 .dot {
   width: 0px;
   height: 0px;
@@ -375,6 +384,12 @@ body{
 .hiddenButton:hover {
   background-color: var(--icon-hover);
 }
+.skillText{
+  display: flex;
+  margin-top: 60px;
+  margin-left: 40px;
+  font-size: 1.5rem;
+}
 @keyframes mainBlock {
   0% {
     width: 0%;
@@ -414,6 +429,24 @@ body{
     opacity: 1;
   }
 }
+@keyframes breathPop {
+  0% {
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+  60% {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+  100% {
+    -webkit-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    transform: scale(1.3);
+  }
+}
+
 @keyframes glowing {
   0% {
     -webkit-transform: scale(0.9);
