@@ -27,88 +27,47 @@ const Header = (props: HeaderType) => {
   }, [theme]);
 
   return (
-    <>
-      {/* <nav className="navbar navbar-expand-lg navbar-light bg-light">
-  <a className="navbar-brand" href="#home">Cheng Yang</a>
-  <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span className="navbar-toggler-icon"></span>
-  </button>
+    <Navbar expand={"md"} fixed={"top"} bg={"faded"} variant={"light"}>
+      <Container className="container-fluid">
+        <a className="navbar-brand" href="#">
+          Cheng Yang
+        </a>
 
-  <div className="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul className="navbar-nav mr-auto">
-      <li className="nav-item active">
-        <a className="nav-link" href="#home">Home <span className="sr-only">(current)</span></a>
-      </li>
-      <li className="nav-item">
-        <a className="nav-link" href="#about">About</a>
-      </li>
-      <li className="nav-item">
-        <a className="nav-link" href="#skill">Skill</a>
-      </li>
-      <li className="nav-item">
-        <a className="nav-link" href="#portfolio">Portfolio</a>
-      </li>
-      <li className="nav-item">
-        <a className="nav-link" href="#contact">Contact</a>
-      </li>
-      <li className="nav-item my-2 my-lg-0"  onClick={() =>
-                setTheme(theme === Mode.dark ? Mode.light : Mode.dark)
-              }>
-                {theme === Mode.light ? (
-                <BsSun className="sun" />
-              ) : (
-                <BsMoon className="moon" />
-              )}
-      </li>
-    </ul>
-
-  </div>
-</nav> */}
-      <Navbar fixed="top" expand="lg">
-        <Container>
-          <Navbar.Brand href="#home">Cheng Yang</Navbar.Brand>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
+        <Navbar.Toggle aria-controls="main-navigation"  />
+        <Navbar.Collapse id="main-navigation" className="justify-content-end">
+          <Nav className="navbar-nav mx-auto ">
+            <Nav.Item className="text-center">
+              <Nav.Link href="#home">Home</Nav.Link>
+            </Nav.Item>
+            <Nav.Item className="text-center">
+              <Nav.Link href="#about">About</Nav.Link>
+            </Nav.Item>
+            <Nav.Item className="text-center">
+              <Nav.Link href="#skill">Skill</Nav.Link>
+            </Nav.Item>
+            <Nav.Item className="text-center">
+              <Nav.Link href="#portfolio">Portfolio</Nav.Link>
+            </Nav.Item>
+            <Nav.Item className="text-center">
+              <Nav.Link href="#contact">Contact</Nav.Link>
+            </Nav.Item>
+          </Nav>
+          <span
+            className="navbar-text"
+            onClick={() =>
+              setTheme(theme === Mode.dark ? Mode.light : Mode.dark)
+            }
           >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <Navbar.Collapse id="navbarSupportedContent">
-            <Container>
-              <Nav className="me-auto ">
-                <Nav.Item>
-                  <Nav.Link href="#home">Home</Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                  <Nav.Link href="#about">About</Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                  <Nav.Link href="#skill">Skill</Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                  <Nav.Link href="#portfolio">Portfolio</Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                  <Nav.Link href="#contact">Contact</Nav.Link>
-                </Nav.Item>
-              </Nav>
-            </Container>
-            <Navbar.Text>
-              {theme === Mode.light ? (
-                <BsSun className="sun" />
-              ) : (
-                <BsMoon className="moon" />
-              )}
-            </Navbar.Text>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
-    </>
+            {theme === Mode.light ? (
+              <BsSun className="sun" />
+            ) : (
+              <BsMoon className="moon" />
+            )}
+          </span>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 };
+
 export default Header;

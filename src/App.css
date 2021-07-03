@@ -91,7 +91,7 @@ body{
   padding-right: 1.5rem;
   text-transform: uppercase;
 }
-.nav-link.active:focus {
+.nav-link.active :focus{
   border-bottom: 2px solid var(--text-color) !important;
 }
 .form-control-plaintext{
@@ -242,7 +242,7 @@ body{
   background-color: var(--description-text);
   z-index: 100;
   position: fixed;
-  margin-top: 55px;
+  margin-top: -2px;
   /* animation:mainBlock 2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards ; */
 }
 .headerKey :first-of-type {
