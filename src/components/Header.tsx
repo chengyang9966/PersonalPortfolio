@@ -28,13 +28,13 @@ const Header = (props: HeaderType) => {
 
   return (
     <Navbar expand={"md"} fixed={"top"} bg={"faded"} variant={"light"}>
-      <Container className="container-fluid">
+      <Container >
         <a className="navbar-brand" href="#">
           Cheng Yang
         </a>
 
         <Navbar.Toggle aria-controls="main-navigation"  />
-        <Navbar.Collapse id="main-navigation" className="justify-content-end">
+        <Navbar.Collapse id="main-navigation"  className="justify-content-center">
           <Nav className="navbar-nav mx-auto ">
             <Nav.Item className="text-center">
               <Nav.Link href="#home">Home</Nav.Link>
