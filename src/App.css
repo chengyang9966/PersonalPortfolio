@@ -66,6 +66,7 @@
 :before {
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
+  
 }
 body{
   color: var(--text-color) !important;
@@ -96,6 +97,14 @@ body{
 }
 .form-control-plaintext{
   color: var(--text-color) !important;
+}
+.arrow-icon-up{
+  color: var(--text-color) !important;
+  animation: dropUp 1s forwards;
+}
+.arrow-icon-down{
+  color: var(--text-color) !important;
+  animation: dropdown 1s forwards;
 }
 .section1 {
   display: flex;
@@ -447,6 +456,28 @@ body{
   }
 }
 
+@keyframes dropdown {
+  0%{
+    transform: rotate(0);
+    -webkit-transform: rotate(0);
+  }
+
+  100%{
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+  }
+}
+@keyframes dropUp {
+  0%{
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+  }
+  100%{
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+  }
+}
+
 @keyframes glowing {
   0% {
     -webkit-transform: scale(0.9);
@@ -611,3 +642,24 @@ body{
     transform: rotate(360deg);
   }
 }
+/* Reseponsive */
+
+/* @media (min-width: 576px) { } */
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) { 
+
+  .nav-link.active {
+    border-bottom: hidden !important;
+    color: var(--text-color) !important;
+  }
+  .nav-link.active :focus{
+    border-bottom: hidden !important;
+  }
+ }
+
+/* Large devices (desktops, 992px and up) */
+/* @media (min-width: 992px) { ... } */
+
+ /* Extra large devices (large desktops, 1200px and up) */
+/* @media (min-width: 1200px) { ... } */

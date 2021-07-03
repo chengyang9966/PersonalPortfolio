@@ -70,13 +70,15 @@ function App() {
       <div className={theme} style={{ marginBottom: "80rem" }}>
         <Header theme={setTheme} />
         <span className="headerKey" />
-     
+     <div  data-spy="scroll" data-target="#navbar-example2" data-offset="0" >
+
         <Body />
 
         <Personal />
         <PreviewImage />
         <ImageContainer />
         <ContactMe />
+     </div>
       </div>
       <FloatButton />
       <div style={{ display: "flex", justifyContent: "center" }}>
