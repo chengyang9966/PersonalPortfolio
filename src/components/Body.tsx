@@ -1,8 +1,9 @@
 import React from "react";
 import 'src/App.css'
+import { Jumbotron } from "react-bootstrap";
 const Body = () => {
   return (
-    <section id="home">
+    <Jumbotron id="home" className="jumbotron-fluid">
      
         <div className="box">
           <div className="title">
@@ -14,11 +15,11 @@ const Body = () => {
 
           <div className="role">
             <div className="block"></div>
-            <p className="description">Software engineer </p>
+            <p className="description lead">Software engineer </p>
           </div>
         </div>
 
-    </section>
+    </Jumbotron>
   );
 };
 
