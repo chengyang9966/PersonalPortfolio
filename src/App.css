@@ -336,6 +336,8 @@ body{
   margin-right: 20rem;
   padding-top: 2rem;
   padding-bottom: 2rem;
+  width: 100%;
+
 }
 .icon-size {
   font-size: 20;
@@ -708,6 +710,10 @@ body{
   }
   .description{
     margin-top: 10rem;
+    margin-left: 6rem;
+  }
+  .ContactMe-div{
+    margin-left: 10px;
   }
   .personal-bg{
     display: flex;
@@ -717,14 +723,7 @@ body{
     min-width: 100%;
     margin-left: 22rem;
   }
-  .CopyRight{
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-    margin-left: 3rem;
-    padding-left: 11rem;
-    width: 17rem;
-  }
+
  }
 
 /* Large devices (desktops, 992px and up) */
