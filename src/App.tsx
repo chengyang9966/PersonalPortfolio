@@ -81,7 +81,7 @@ function App() {
      </div>
       </div>
       <FloatButton />
-      <div style={{ display: "flex", justifyContent: "center" }}>
+      <div className='CopyRight' style={{ display: "flex", justifyContent: "center" }}>
         <p style={{ marginBottom: 0 }}>
           Copyright © 2021 Cheng Yang. All rights reserved.{" "}
         </p>

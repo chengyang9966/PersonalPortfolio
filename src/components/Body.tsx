@@ -3,8 +3,7 @@ import 'src/App.css'
 import { Jumbotron } from "react-bootstrap";
 const Body = () => {
   return (
-    <Jumbotron id="home" className="jumbotron-fluid">
-     
+    <Jumbotron id="home" fluid>
         <div className="box">
           <div className="title">
             <span className="block"></span>
