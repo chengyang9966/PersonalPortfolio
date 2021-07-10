@@ -657,11 +657,41 @@ body{
   }
 }
 /* Reseponsive */
-
-/* @media screen and  (min-width: 576px) { } */
+/*  Mobile*/
+@media only screen and  (max-width: 600px) { 
+  .nav-link.active {
+    border-bottom: hidden !important;
+    color: var(--text-color) !important;
+  }
+  .nav-link.active :focus{
+    border-bottom: hidden !important;
+  }
+  .title{
+    padding-left: 4rem;
+  }
+  .description{
+    margin-top: 10rem;
+  }
+  .personal-bg{
+    display: flex;
+    justify-content: center;
+  }
+  #about{
+    min-width: 100%;
+    margin-left: 22rem;
+  }
+  .CopyRight{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-left: 3rem;
+    padding-left: 11rem;
+    width: 17rem;
+  }
+}
 
 /* Medium devices (tablets, 768px and up) */
-@media screen and (max-width: 768px) { 
+@media only screen and (max-width: 768px)and (min-width: 759px) { 
 
   .nav-link.active {
     border-bottom: hidden !important;
@@ -669,6 +699,9 @@ body{
   }
   .nav-link.active :focus{
     border-bottom: hidden !important;
+  }
+  .title{
+    padding-left: 3rem;
   }
   .box{
     text-align: center;
