@@ -5,7 +5,14 @@ const Mode={
 type HeaderType={
     theme:(txt:string)=>void
   }
+type ArrayType={
+  title:string,
+     text:string,
+     href:string,
+     iconClass?:string,
+     icons:any
+}
 
 
 export { Mode }
-export type {HeaderType}
+export type {HeaderType,ArrayType}

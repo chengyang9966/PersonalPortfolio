@@ -9,6 +9,7 @@
   --secondary-background: #f3ca72;
   --text-color: rgb(0, 0, 0);
   --contact-shadow-color: #a09191;
+  --linkedIn-color:#0a66c2;
   --navLink-color: #989797;
   --navLink-bg-color: #f9f9f9;
   --description-text: #3f3f3f;
@@ -27,6 +28,7 @@
   --contactBtn: rgba(255, 255, 255, 0.829);
   --contactBtnBg:rgba(183, 199, 224, 0.781);
   --background-color: #fffcfc;
+  --linkedIn-color:#0a66c2;
   --secondary-background: #f3ca72;
   --text-color: rgb(0, 0, 0);
   --contact-shadow-color: #a09191;
@@ -48,6 +50,7 @@
   --yellow: #FFCC33;
   --white: rgb(58, 57, 57);
   --background-color: #0f0f0f;
+  --linkedIn-color:#0a66c2;
   --secondary-background: #f3ca72;
   --text-color: rgb(255, 254, 254);
   --navLink-color: rgba(255, 254, 254, 0.781);
@@ -109,6 +112,9 @@ body{
   color: var(--text-color) !important;
   animation: dropdown 1s forwards;
 }
+.arrow-icon-right{
+  animation: dropRight 1s forwards;
+}
 .section1 {
   display: flex;
   justify-content: center;
@@ -136,6 +142,8 @@ body{
 .card{
   background-color: var(--background-color) !important;
   color: var(--text-color) !important;
+    width: 93%;
+    margin-left: 3rem;
 }
 .card a{
   color: var(--link-color) !important;
@@ -258,6 +266,9 @@ body{
   background-clip: border-box;
   border: "0px none";
 }
+.ContactMeBody{
+  padding:1rem 0px 0px;
+}
 
 .headerKey {
   width: 100%;
@@ -332,19 +343,55 @@ body{
   border-radius: 30px;
   background-color: var(--navLink-bg-color)!important;
   box-shadow: 0 4px 8px 0 var(--contact-shadow-color), 0 6px 20px 0 var(--contact-shadow-color);
-  margin-left: 20rem;
   margin-right: 20rem;
   padding-top: 2rem;
+  margin-left: 10px;
+  padding-right: 10px;
   padding-bottom: 2rem;
-  width: 100%;
+  width: 98%;
 
 }
 .icon-size {
   font-size: 20;
 }
+.itemText{
+  color:var(--navLink-color);
+}
 .whatsapp-icon {
   font-size: 20;
   color: var(--whatsapp-color);
+}
+.roundedFixedWhatsappBtn {
+  height: 60px;
+  line-height: 80px;
+  width: 60px;
+  font-size: 2em;
+  font-weight: bold;
+  border-radius: 50%;
+  background-color: var(--whatsapp-color) !important;
+  color: var(--contactBtn) !important;
+  /* color: var(--whatsapp-color) !important; */
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.roundedFixedLinkedInBtn {
+  height: 60px;
+  line-height: 80px;
+  width: 60px;
+  font-size: 2em;
+  font-weight: bold;
+  border-radius: 50%;
+  background-color: var(--linkedIn-color) !important;
+  color: var(--contactBtn) !important;
+  /* color: var(--whatsapp-color) !important; */
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .fixedButton {
   position: fixed;
@@ -415,6 +462,12 @@ body{
   margin-left: 40px;
   font-size: 1.5rem;
 }
+.subTitle{
+  text-transform: uppercase;
+}
+.white{
+  color:var(--white)!important;
+}
 @keyframes mainBlock {
   0% {
     width: 0%;
@@ -481,6 +534,17 @@ body{
   100%{
     transform: rotate(180deg);
     -webkit-transform: rotate(180deg);
+  }
+}
+@keyframes dropRight {
+  0%{
+    transform: rotate(0);
+    -webkit-transform: rotate(0);
+  }
+
+  100%{
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
   }
 }
 @keyframes dropUp {
@@ -719,9 +783,16 @@ body{
     display: flex;
     justify-content: center;
   }
+  .CopyRight{
+    padding-bottom: 1rem;
+
+  }
+  .card{
+    margin: 0px auto;
+  }
   #about{
     min-width: 100%;
-    margin-left: 22rem;
+    margin: 5rem auto ;
   }
 
  }

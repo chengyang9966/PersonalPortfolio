@@ -80,7 +80,7 @@ function App() {
         <ContactMe />
      </div>
       </div>
-      <FloatButton />
+      {/* <FloatButton /> */}
       <div className='CopyRight' style={{ display: "flex", justifyContent: "center" }}>
         <p style={{ marginBottom: 0 }}>
           Copyright © 2021 Cheng Yang. All rights reserved.{" "}
