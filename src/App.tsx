@@ -4,7 +4,6 @@ import Personal from "src/components/Personal";
 import ImageContainer from "src/components/ImageContainer";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ContactMe from "src/components/ContactMe";
-import FloatButton from "src/components/FloatButton";
 import Loading from "src/components/Loading";
 import PreviewImage from "src/components/previewImage";
 import { Mode } from "src/Types";
@@ -13,6 +12,11 @@ import { useState, useEffect } from "react";
 function App() {
   const [loading, setLoading] = useState<Boolean>(true);
   var root = document.getElementById("root");
+  useEffect(() => {
+    window.process = {
+      ...window.process,
+    };
+  }, []);
   useEffect(() => {
     if (root) {
       setLoading(false);
@@ -67,21 +71,29 @@ function App() {
     <Loading />
   ) : (
     <>
-      <div className={theme} style={{ marginBottom: "80rem" }}>
+      <div className={theme}>
         <Header theme={setTheme} />
         <span className="headerKey" />
-     <div  data-spy="scroll" data-target="#navbar-example2" data-offset="0" >
+        <div
+          data-spy="scroll"
+          data-target="#navbar"
+          data-offset="50"
+          className="scrollspy-example"
+          tabIndex={0}
+        >
+          <Body />
 
-        <Body />
-
-        <Personal />
-        <PreviewImage />
-        <ImageContainer />
-        <ContactMe />
-     </div>
+          <Personal />
+          <PreviewImage />
+          <ImageContainer />
+          <ContactMe />
+        </div>
       </div>
       {/* <FloatButton /> */}
-      <div className='CopyRight' style={{ display: "flex", justifyContent: "center" }}>
+      <div
+        className="CopyRight"
+        style={{ display: "flex", justifyContent: "center" }}
+      >
         <p style={{ marginBottom: 0 }}>
           Copyright © 2021 Cheng Yang. All rights reserved.{" "}
         </p>
