@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Carousel from "react-bootstrap/Carousel";
+import { redirectUrl } from "src/utils/redirect";
 
 const ImageContainer = () => {
   const [index, setIndex] = useState(0);
@@ -18,14 +19,16 @@ const ImageContainer = () => {
       path: "/scratch_app.png",
       title: "Scratch App",
       subTitle: "note taking application support upload images",
+      redirectUrl:'https://scratch-app.link',
       interval: intervalTime,
     },
-    // {
-    //   path: "/TodoList.png",
-    //   title: "Todo List 3",
-    //   subTitle: "A list of tasks you need to complete and you want to do",
-    //   interval: intervalTime,
-    // },
+    {
+      path: "/swagger_api.png",
+      title: "Swagger API",
+      subTitle: "Basic Documentation for API using swagger",
+      redirectUrl:'https://swagger.tester.fun/api-docs',
+      interval: intervalTime,
+    },
   ];
   return (
     <section className="imageContainer" style={{marginTop:'10rem'}}>
@@ -51,7 +54,7 @@ const ImageContainer = () => {
                 height={630}
               />
               <Carousel.Caption className="dark">
-                <h3>{w.title}</h3>
+              <h3 style={{cursor:w.redirectUrl?'pointer':'default'}} onClick={(e)=>w.redirectUrl&&redirectUrl(w.redirectUrl)}>{w.title}</h3>
                 <p>{w.subTitle}</p>
               </Carousel.Caption>
             </Carousel.Item>
