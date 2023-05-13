@@ -14,12 +14,12 @@ const ImageContainer = () => {
       subTitle: "A list of tasks you need to complete and you want to do",
       interval: intervalTime,
     },
-    // {
-    //   path: "/TodoList.png",
-    //   title: "Todo List 2",
-    //   subTitle: "A list of tasks you need to complete and you want to do",
-    //   interval: intervalTime,
-    // },
+    {
+      path: "/scratch_app.png",
+      title: "Scratch App",
+      subTitle: "note taking application support upload images",
+      interval: intervalTime,
+    },
     // {
     //   path: "/TodoList.png",
     //   title: "Todo List 3",
@@ -28,7 +28,7 @@ const ImageContainer = () => {
     // },
   ];
   return (
-    <section className="imageContainer">
+    <section className="imageContainer" style={{marginTop:'10rem'}}>
       <div id="portfolio">
         <h2 className="portfolio-header">Portfolio</h2>
 
@@ -47,6 +47,8 @@ const ImageContainer = () => {
                 className="d-block w-100 "
                 src={process.env.PUBLIC_URL + w.path}
                 alt={`${i + 1} 'slide'`}
+                width={1200}
+                height={630}
               />
               <Carousel.Caption className="dark">
                 <h3>{w.title}</h3>

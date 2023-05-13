@@ -10,6 +10,7 @@ import { Mode } from "src/Types";
 import { useState, useEffect } from "react";
 
 function App() {
+
   const [loading, setLoading] = useState<Boolean>(true);
   var root = document.getElementById("root");
   useEffect(() => {
@@ -24,7 +25,6 @@ function App() {
       setLoading(true);
     }
   }, [root]);
-
   var body = document.body;
   var html = document.documentElement;
   const [theme, setTheme] = useState(Mode.light);
@@ -75,7 +75,7 @@ function App() {
         <Header theme={setTheme} />
         <span className="headerKey" />
         <div
-          data-spy="scroll"
+          data-bs-spy="scroll"
           data-target="#navbar"
           data-offset="50"
           className="scrollspy-example"
@@ -95,7 +95,7 @@ function App() {
         style={{ display: "flex", justifyContent: "center" }}
       >
         <p style={{ marginBottom: 0 }}>
-          Copyright © 2021 Cheng Yang. All rights reserved.{" "}
+          Copyright © 2023 Cheng Yang. All rights reserved.{" "}
         </p>
       </div>
     </>

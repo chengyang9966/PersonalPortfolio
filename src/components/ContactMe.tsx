@@ -26,7 +26,7 @@ const ContactMe = (params: any) => {
     {
       title: "Contact Number",
       text: "+60108930879",
-      href: "https://api.whatsapp.com/send?phone=+60108930879]&text=Hello Cheng Yang I would like to connect with you",
+      href: "https://api.whatsapp.com/send?phone=+60108930879&text=Hello Cheng Yang I would like to connect with you",
       iconClass: "roundedFixedWhatsappBtn",
       icons: <AiOutlineWhatsApp />,
     },

@@ -305,7 +305,7 @@ body {
   margin-bottom: 20 !important;
 }
 .carousel-caption {
-  color: var(--description-text);
+  color: var(--description-text) !important;
 }
 .imageContainer {
   background-color: var(--background-color) !important;
