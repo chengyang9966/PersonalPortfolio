@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Home from "./components/home";
 
 function App() {
+
   const [loading, setLoading] = useState<Boolean>(true);
 
   var root = document.getElementById("root");
@@ -14,7 +15,6 @@ function App() {
       setLoading(true);
     }
   }, [root]);
-
 
 
   return loading ? (
