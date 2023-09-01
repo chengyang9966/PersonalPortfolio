@@ -11,8 +11,9 @@ import {
 // import Row from 'react-bootstrap/Row';
 // import { AiOutlineMail,AiOutlineEye,AiOutlineEyeInvisible,AiOutlineWhatsApp } from "react-icons/all";
 import { ArrayType } from "src/Types";
+import { componentInterface } from "./Body";
 
-const ContactMe = (params: any) => {
+const ContactMe = (props: componentInterface) => {
   const [visible, SetVisible] = useState<Boolean>(false);
   const [show, setShow] = useState<Boolean>(false);
   const array: Array<ArrayType> = [
@@ -26,7 +27,7 @@ const ContactMe = (params: any) => {
     {
       title: "Contact Number",
       text: "+60108930879",
-      href: "https://api.whatsapp.com/send?phone=+60108930879]&text=Hello Cheng Yang I would like to connect with you",
+      href: "https://api.whatsapp.com/send?phone=+60108930879&text=Hello Cheng Yang I would like to connect with you",
       iconClass: "roundedFixedWhatsappBtn",
       icons: <AiOutlineWhatsApp />,
     },
@@ -45,7 +46,7 @@ const ContactMe = (params: any) => {
   };
   return (
     <div style={{ margin: "10rem 0px" }}>
-      <h2 id="contact" className="portfolio-header">
+      <h2 id="contact" className="portfolio-header" ref={props.newRef}>
         Contact Me
       </h2>
       <Card style={{ zIndex: 100, borderRadius: "10px" }}>

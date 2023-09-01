@@ -1,9 +1,13 @@
 import React from "react";
 import 'src/App.css'
 import { Jumbotron } from "react-bootstrap";
-const Body = () => {
+export interface componentInterface {
+  newRef:React.RefObject<any>
+}
+const Body = (props:componentInterface) => {
+    
   return (
-    <Jumbotron id="home" fluid>
+    <Jumbotron id="home" fluid ref={props.newRef}>
         <div className="box">
           <div className="title">
             <span className="block"></span>

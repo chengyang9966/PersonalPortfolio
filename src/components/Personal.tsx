@@ -1,35 +1,26 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
 import CardGroup from "react-bootstrap/CardGroup";
+import { componentInterface } from "./Body";
 
-const Personal = () => {
+const Personal = (props: componentInterface) => {
   return (
     <div className="personal-bg">
-      <CardGroup id="about">
+      <CardGroup id="about" ref={props.newRef}>
         <Card style={{ border: "none" }}>
           <Card.Body>
-            <Card.Title className="about-title">About Me </Card.Title>
-            {/* <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle> */}
-            <Card.Text>
-              Hello! My name is Cheng Yang and I enjoy creating things that live
-              on the internet.
+            <Card.Text className="about-info">
+              Hello There ✋,I am,
+              <br /> <span className="info-name">Cheng Yang Ong</span>.
+              <br />
+              <br />
+              <img
+                src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=25&pause=1000&color=154A62&center=true&width=435&lines=Self+Taught+Programmer;+Full+Stack+Developer;+Bring+dreams+to+life+!;3+Years+of+Experiences"
+                alt="Typing SVG"
+              />
             </Card.Text>
             <Card.Text>
-              I am a Software Engineer specialised in frontend and backend
-              development for complex scalable web apps ie Hotel Management
-              System (HMS) , Human Resources System (HRS). Currently, I'm an
-              engineer at{" "}
-              <a
-                href="https://mydigibusiness.digi.com.my"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Tribehired Sdn Bhd{" "}
-              </a>{" "}
-              collaborate close with Digi and focus on My Digi Business Website.
-            </Card.Text>
-            <Card.Text>
-              Here are a few technologies I've been working with recently:
+              I have experience working with AWS Cloud Platform.
             </Card.Text>
           </Card.Body>
         </Card>
